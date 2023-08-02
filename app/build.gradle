@@ -1,17 +1,24 @@
-pligins {
-    id 'application'
+
+plugins {
+    id 'application' // <1>
 }
+
 repositories {
-    mavenCentral()
+    mavenCentral() // <2>
 }
+
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
-    testRuntimeOnly 'Org.junit.platform:junit-platform-launcher'
-    implementation 'com.google.guava:guava:31.1-jre'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2' // <3>
+
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    implementation 'com.google.guava:guava:31.1-jre' // <4>
 }
+
 application {
-    mainClass = 'demo.App'
+    mainClass = 'demo.App' // <5>
 }
+
 tasks.named('test') {
-    useJUnitPlatform()
+    useJUnitPlatform() // <6>
 }
