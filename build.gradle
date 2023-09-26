@@ -4,7 +4,7 @@ plugins {
 
 sonar {
   properties {
-    property "sonar.projectKey", "Django"
-    property "sonar.projectName", "Django"
+    property "sonar.projectKey", "django1"
+    property "sonar.projectName", "django1"
   }
 }
